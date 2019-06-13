@@ -1,0 +1,16 @@
+<html>
+    <body>
+        <div style="margin:0 auto; width: 300px" >
+            <img src="assets/social-300x300.png" />
+            <h1 id="msg" style="text-align: center"></h1>
+        </div>
+    </body>
+    <script>
+        fetch('/api/ejemplo').then(function(response) {
+            return response.json();
+        })
+        .then(function(myJson) {
+            document.getElementById("msg").innerHTML = myJson.msg
+        })
+    </script>
+</html>
