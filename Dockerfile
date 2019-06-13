@@ -23,5 +23,5 @@ RUN npm install
 #Copia del directorio donde está el código al directorio dentro del container donde se va a ejecutar.
 COPY [".", "/src"]
 
-#Ejecutar dentro del servidor
+#Ejecutar dentro del servidor. Ojo!! Esto no lo toma heroku
 CMD ["node", "/src/index.js"]
